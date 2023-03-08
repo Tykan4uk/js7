@@ -11,11 +11,70 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>JS7</title>
+  <title>JS5</title>
+
+  <link
+    media="all"
+    rel="stylesheet"
+    href="./styles.css"
+  >
 </head>
 
 <body>
+  <div class="tabs">
+    <input
+      type="radio"
+      name="tab-btn"
+      id="tab-btn-1"
+      value=""
+      checked
+    >
+    <label for="tab-btn-1">Closure</label>
+    <input
+      type="radio"
+      name="tab-btn"
+      id="tab-btn-2"
+      value=""
+    >
+    <label for="tab-btn-2">Decorator</label>
+    <input
+      type="radio"
+      name="tab-btn"
+      id="tab-btn-3"
+      value=""
+    >
+    <label for="tab-btn-3">Factorial recursion</label>
 
+    <div id="content-1">
+      <input
+        type="text"
+        placeholder="Input you number..."
+        id="closure-input"
+        value="5"
+      >
+      <button onclick="calculator.add(+getValueById('closure-input'))">Add</button>
+      <button onclick="calculator.subtract(+getValueById('closure-input'))">Subtract</button>
+      <button onclick="calculator.multiple(+getValueById('closure-input'))">Multiple</button>
+      <button onclick="calculator.divide(+getValueById('closure-input'))">Divide</button>
+      <button onclick="calculator.reset()">Reset</button>
+      <label>Result: <label id="closure-output">5</label></label>
+    </div>
+    <div id="content-2">
+      <label>Result in console</label>
+    </div>
+    <div id="content-3">
+      <input
+        type="number"
+        placeholder="Input you number..."
+        id="factorial-input"
+        value="5"
+        min="1"
+        onchange="factorial(+getValueById('factorial-input'))"
+      >
+      <label>Result: <label id="factorial-output">120</label></label>
+    </div>
+  </div>
+  <script src="./index.js"></script>
 </body>
 
 </html>
